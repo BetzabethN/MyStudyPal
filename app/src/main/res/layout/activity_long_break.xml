@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_blue"
+    tools:context=".LongBreak">
+
+    <TextView
+        android:id="@+id/app_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="My Study Pal"
+        android:fontFamily="@font/rowdies"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/start_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="76dp"
+        android:text="START"
+        android:textColor="@color/dark_blue"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/report_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/report_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="124dp"
+        android:text="Report"
+        android:backgroundTint="@color/light_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/settings_btn"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/settings_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="124dp"
+        android:text="Setting"
+        android:backgroundTint="@color/light_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="354dp"
+        android:layout_height="364dp"
+        android:background="@color/light_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.403"></FrameLayout>
+
+    <Button
+        android:id="@+id/pomodoro_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="Pomodoro"
+        android:textSize="10sp"
+        style="?android:attr/borderlessButtonStyle"
+        app:layout_constraintBottom_toTopOf="@+id/timer"
+        app:layout_constraintEnd_toStartOf="@+id/shortbrk_btn"
+        app:layout_constraintHorizontal_bias="0.867"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="242dp"
+        android:layout_height="144dp"
+        android:layout_marginBottom="24dp"
+        android:text="15:00"
+        android:textColor="@color/white"
+        android:textSize="90sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/start_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/shortbrk_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="40dp"
+        android:text="Short Break"
+        android:textSize="10sp"
+        android:textColor="@color/white"
+        style="?android:attr/borderlessButtonStyle"
+        android:backgroundTint="@color/light_red"
+        app:layout_constraintBottom_toTopOf="@+id/timer"
+        app:layout_constraintEnd_toStartOf="@+id/longbrk_btn" />
+
+    <Button
+        android:id="@+id/longbrk_btn"
+        android:backgroundTint="@color/dark_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="40dp"
+        android:text="Long Break"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/timer"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
