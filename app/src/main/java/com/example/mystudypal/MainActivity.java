@@ -50,28 +50,31 @@ public class MainActivity extends AppCompatActivity {
             int pomoTime = infoItem.getInt("pomoTime");
             int interval = infoItem.getInt("interval");
             int finalInterval = infoItem.getInt("finalInterval");
+
             if (finalInterval == interval) {
                 infoItem.put("finalInterval", 1);
+                FileUtils.writeFile(this,"info.json", infoItem.toString());
 
-            } else {infoItem.put("finalInterval", finalInterval+1);}
+            } else {
+                infoItem.put("finalInterval", finalInterval+1);
+                FileUtils.writeFile(this,"info.json", infoItem.toString());}
+
 
             binding.timer.setText(pomoTime +":00");
             binding.startBtn.setOnClickListener(v -> {
                 try {
                     infoItem.put("running", true);
+                    System.out.println();
+                    FileUtils.writeFile(this,"info.json", infoItem.toString());
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-                timer(pomoTime, finalInterval);});
+                timer(pomoTime, finalInterval, interval);});
 
 
             boolean autoPomo = infoItem.getBoolean("autoPomo");
             boolean running = infoItem.getBoolean("running");
-            if (autoPomo && running) {timer(pomoTime, finalInterval);}
-
-
-
-
+            if (autoPomo && running) {timer(pomoTime, finalInterval, interval);}
 
         } catch (IOException | JSONException e){
             Log.i("DEBUG", "Can't read file");
@@ -79,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void timer(int timerMins, int finalInterval) {
+    private void timer(int timerMins, int finalInterval, int interval) {
 
         timeLeft = timerMins * 60000; // have to use milliseconds so multiply time by 60000
         pomoTimer = new CountDownTimer(timeLeft, 1000) {
@@ -91,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                if (finalInterval==4) {goToLongBreak();}
+                if (finalInterval==interval) {goToLongBreak();}
                 else {goToShortBreak();}
             }
         }.start();
