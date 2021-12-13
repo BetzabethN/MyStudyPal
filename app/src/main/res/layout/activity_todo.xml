@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/app_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="My Study Pal"
+        android:fontFamily="@font/rowdies"
+        android:textColor="@color/gray"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/section_today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/dark_red"
+        android:text="TODAY"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/app_title"
+        app:layout_constraintTop_toBottomOf="@+id/app_title" />
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="233dp"
+        android:layout_height="109dp"
+        android:background="@color/background_light_peach"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.329">
+
+        <TextView
+            android:id="@+id/timer1"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:fontFamily="@font/rowdies_bold"
+            android:gravity="center"
+            android:text="Today's List"
+            android:textColor="@color/gray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/hours1"
+            android:layout_width="wrap_content"
+            android:layout_height="73dp"
+            android:drawableLeft="@drawable/ic_baseline_timer_24"
+            android:drawablePadding="20sp"
+            android:text=""
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/EditText1"
+            android:layout_width="170dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Edit" />
+
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/section_overall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="192dp"
+        android:backgroundTint="@color/dark_red"
+        android:text="THIS WEEK"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/app_title"
+        app:layout_constraintTop_toBottomOf="@+id/app_title" />
+
+    <Button
+        android:id="@+id/button_done"
+        android:layout_width="86dp"
+        android:layout_height="44dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="28dp"
+        android:backgroundTint="@color/gray"
+        android:fontFamily="@font/rowdies_light"
+        android:text="done"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout3"
+        android:layout_width="233dp"
+        android:layout_height="109dp"
+        android:background="@color/background_light_peach"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.808">
+
+        <TextView
+            android:id="@+id/timer3"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:fontFamily="@font/rowdies_bold"
+            android:gravity="center"
+            android:text="Others"
+            android:textColor="@color/gray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/days"
+            android:layout_width="86dp"
+            android:layout_height="73dp"
+            android:drawableLeft="@drawable/ic_baseline_today_24"
+            android:drawablePadding="20sp"
+            android:text=""
+            android:textSize="20sp" />
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="233dp"
+        android:layout_height="109dp"
+        android:background="@color/background_light_peach"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.591">
+
+        <TextView
+            android:id="@+id/timer2"
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:fontFamily="@font/rowdies_bold"
+            android:gravity="center"
+            android:text="Weekly List Priorities"
+            android:textColor="@color/gray"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/hours2"
+            android:layout_width="wrap_content"
+            android:layout_height="74dp"
+            android:drawableLeft="@drawable/ic_baseline_timer_24"
+            android:drawablePadding="20sp"
+            android:text=""
+            android:textSize="20sp" />
+
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
